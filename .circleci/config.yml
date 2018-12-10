@@ -2,8 +2,15 @@ version: 2.1
 
 orbs:
     hello: circleci/hello-build@0.0.7 # uses the circleci/buildpack-deps Docker image
+    slack: circleci/slack@0.1.10
 
 workflows:
     "Hello Workflow":
         jobs:
           - hello/hello-build
+          - slack/notify:
+            message: |
+                Test message from Slack.
+                https://circleci.com/workflow-run/${CIRCLE_WORKFLOW_ID}
+            requires:
+                - hello/hello-build

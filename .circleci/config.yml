@@ -6,11 +6,11 @@ orbs:
 
 jobs:
     send-slack-notify:
-    steps:
-        - slack/notify:
-            message: |
-                Test message from Slack.
-                    https://circleci.com/gh/kenfj/circleci-orb101/${CIRCLE_BUILD_NUM}
+        steps:
+            - slack/notify:
+                message: |
+                    Test message from Slack.
+                        https://circleci.com/gh/kenfj/circleci-orb101/${CIRCLE_BUILD_NUM}
 
 workflows:
     "Hello Workflow":

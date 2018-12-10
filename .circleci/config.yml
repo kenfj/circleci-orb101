@@ -4,8 +4,14 @@ orbs:
     hello: circleci/hello-build@0.0.7 # uses the circleci/buildpack-deps Docker image
     slack: circleci/slack@0.1.10
 
+executors:
+    default:
+        docker:
+            - image: circleci/node
+
 jobs:
     send-slack-notify:
+        executor: default
         steps:
             - slack/notify:
                 message: |

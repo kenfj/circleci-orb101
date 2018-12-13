@@ -23,6 +23,8 @@ Simple Orb example of circleci/slack@0.1.10
 
 ## Tips to create .circleci/config.yml quickly
 
+* Use VSCode (Intellisense in VSCode support CircleCI config.yml)
+
 * Config validation
 
 ```bash
